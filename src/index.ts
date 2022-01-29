@@ -1,5 +1,6 @@
-import express, { Request, Response } from "express";
 import cors from "cors";
+import express, { Request, Response } from "express";
+import mongoose from "mongoose";
 
 require("dotenv").config();
 const app = express();
@@ -12,7 +13,19 @@ app.get("/", (req: Request, res: Response) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-const start = async () => {
+const databaseStart = async () => {
+  try {
+    const connection = await mongoose.connect(process.env.MONGO_URL || "test");
+    console.log("Connected to MongoDB");
+    return connection;
+  } catch (e) {
+    console.error("Could not connect to MongoDB");
+    console.error(e);
+    process.exit();
+  }
+};
+
+const appStart = async () => {
   try {
     app.listen(port, () => {
       console.log(`Server online at http://localhost:${port}`);
@@ -23,4 +36,6 @@ const start = async () => {
   }
 };
 
-start();
+// Initializers.
+databaseStart();
+appStart();
