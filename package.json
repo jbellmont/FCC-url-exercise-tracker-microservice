@@ -9,9 +9,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@types/express": "^4.17.13",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.13",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
@@ -30,6 +27,9 @@
   ],
   "devDependencies": {
     "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "file:types/express@types/jest",
     "jest": "^27.4.7",
     "nodemon": "^2.0.15"
   }
