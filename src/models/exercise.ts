@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-import { username } from "./user.model";
+import { username } from "./user";
 
 export const exercise = {
   description: String,

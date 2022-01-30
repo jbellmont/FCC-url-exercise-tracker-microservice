@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-import { exercise } from "./exercise.model";
-import { username } from "./user.model";
+import { exercise } from "./exercise";
+import { username } from "./user";
 
 const logSchema = new mongoose.Schema({
   username,
