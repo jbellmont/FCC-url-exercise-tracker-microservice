@@ -1,9 +1,9 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 
-import { UserModel } from "../models/user";
+import { UserModel } from "../models/user.model";
 
-import { createUser } from "./user";
+import { createUser } from "./user.service";
 
 const MOCK_USERNAME = "test123";
 
