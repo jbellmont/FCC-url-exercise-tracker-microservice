@@ -1,7 +1,7 @@
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 
-import { UserModel } from "../models/user.model";
+import { UserModel } from "../models/user";
 
 import { createUser } from "./user";
 

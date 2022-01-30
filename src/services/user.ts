@@ -1,4 +1,4 @@
-import { User, UserModel } from "../models/user.model";
+import { User, UserModel } from "../models/user";
 
 export const createUser = async (username: string): Promise<User> => {
   try {
